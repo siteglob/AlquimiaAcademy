@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bienvenida</title>
+  </head>
+  <body>
+    <h2>ALQUIMIA ACADEMIA DE TEATRO</h2>
+
+    <div id="escenario">
+      <div id="actor1">
+
+    </div>
+      <div id="actor2"></div>
+    </div>
+
+    <style>
+      /* Aqui puedes agregar el CSS de tu escenario */
+       *{
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+         font-family: 'Poppins', sans-serif;
+         
+       }
+      body {
+        margin: 0;
+        padding: 0;
+        
+        background-color: black;
+      } 
+       h2{
+          background-image: radial-gradient(rgb(65, 10, 176), #ffffff);
+          text-align: center;
+        }
+      #escenario {
+        background-image: url("img/teatro_web_imagen.jpg");
+         background-size: cover;
+        background-position: center;
+        opacity: 70%;
+        height: 1000px;
+        width: 1000px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      img {
+        inline-size: hover;
+        block-size: auto;
+        position: absolute;
+      }
+
+      #actor1,
+      #actor2 {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        bottom: 0;
+
+      
+      }
+    </style>
+
+    <script>
+      // Aqui puedes agregar el script de tu escenario
+
+      let actor1 = document.getElementById("actor1");
+      let posicion = 0;
+
+      function moverActor() {
+        if (posicion < 750) {
+          posicion += 5;
+          actor1.style.left = posicion + "px";
+        } else {
+          posicion = 0;
+        }
+      }
+
+      setInterval(moverActor, 100); // Mueve el actor cada 100 milisegundos
+
+      setTimeout(function(){
+   window.location.href = 'index.html'; 
+    // Cambia 'index.html' por el nombre de tu página principal
+    }, 10000);  // Cambia el tiempo de espera según la duración de tu obra de teatro. 60000 milisegundos son 1 minuto.
+
+    </script>
+  </body>
+  <footer>Todos los derechos reservados @ 2024</footer>
+</html>
