@@ -71,22 +71,16 @@ h1.lit {
 }
 
 .led-button span {
-  display: flex;
-  align-items: center;
+  padding: 10px 20px;
+  border: 2px solid #000;
+  border-radius: 5px;
+  font-size: 16px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.led-button span i {
-  margin-right: 5px;
-  transition: transform 0.5s ease;
-}
-
-.led-button.active span i {
-  transform: rotate(360deg);
-}
-
-.led-button.active .title {
-  text-shadow: 1px 1px 2px black, 0 0 50px rgba(255, 204, 0, 0.657), 0 0 10px rgb(251, 226, 8);
+.lit {
+  color: #fff;
 }
 
 /* Estilos para pantallas mayores a 768px */

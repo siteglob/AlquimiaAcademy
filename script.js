@@ -1,4 +1,4 @@
 function encenderLuz() {
-    const Title = document.querySelector('#title');
-    Title.classList.toggle('lit');
+    const title = document.querySelector('#title');
+    title.classList.toggle('lit');
   }
